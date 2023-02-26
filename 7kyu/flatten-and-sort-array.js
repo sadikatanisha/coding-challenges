@@ -8,3 +8,10 @@ function flattenAndSort(array) {
     return newArr.sort((a,b)=>a-b)
   
   }
+
+
+
+
+function flattenAndSort(array) {
+    return [].concat(...array).sort((a,b) => a - b);
+  }
