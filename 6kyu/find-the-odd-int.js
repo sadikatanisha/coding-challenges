@@ -21,7 +21,13 @@ function findOdd(A) {
     }
     for(let key in elCount){
       if(elCount[key]%2!==0){
-        return key
+        return Number(key)
       }
     }
   }
+
+//
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+}
+//
