@@ -19,3 +19,17 @@ function Xbonacci(signature,n) {
     return result;
     
   }
+
+
+  //
+
+  function Xbonacci(arr, n){
+    const result = arr.slice(0, n)
+    const length = arr.length
+    while (result.length < n) {
+      result.push(result.slice(-length).reduce((a, b) => a + b))
+    }
+    return result
+  }
+
+  
