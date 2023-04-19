@@ -6,7 +6,7 @@
 // true if at least one Ruby developer has signed up; or
 // false if there will be no Ruby developers.
 
-
+//my solution
 function isRubyComing(list) {
     // thank you for checking out my kata :)
     let ruby = list.filter((el)=> (el.language == "Ruby"))
@@ -16,4 +16,9 @@ function isRubyComing(list) {
     else{
       return false
     }
+  }
+
+//
+  function isRubyComing(list) {
+    return list.some(e => e.language === 'Ruby');
   }
