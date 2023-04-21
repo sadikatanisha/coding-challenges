@@ -25,3 +25,7 @@
 {
   return s.slice((s.length-1)/2, s.length/2+1);
 }
+
+function accum(s) {
+	return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
