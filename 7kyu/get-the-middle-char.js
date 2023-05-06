@@ -8,6 +8,7 @@
       let length = s.length 
       if(length % 2!==0){
         let start = (length-1)/2
+        
         return s.slice(start,start+1)
         
       }else{
