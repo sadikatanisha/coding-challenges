@@ -21,3 +21,4 @@ const GetSum = (a, b) => {
     for (var i = smaller; i <= bigger; i++) { result += i }
     return result
  }
+
