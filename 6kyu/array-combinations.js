@@ -41,3 +41,7 @@ console.log(
   ]),
   72
 );
+
+function solve(arr) {
+  return arr.reduce((res, curr) => (res *= new Set(curr).size), 1);
+}
