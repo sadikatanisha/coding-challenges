@@ -38,3 +38,8 @@ function removeDuplicateWords(s) {
 
 
   const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
+
+  function removeDuplicateWords (s) {
+    let unique = new Set(s.split(' '));
+    return [...unique].join(' ');
+  }
