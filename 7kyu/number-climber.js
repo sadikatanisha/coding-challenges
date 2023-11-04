@@ -20,3 +20,15 @@ function climb(n) {
 console.log(climb(1), [1]);
 console.log(climb(10), [1, 2, 5, 10]);
 console.log(climb(13), [1, 3, 6, 13]);
+
+function climb(n) {
+  var results = [];
+
+  if (n === 1) {
+    results.push(n);
+  } else {
+    return climb(Math.floor(n / 2)).concat(n);
+  }
+
+  return results;
+}
