@@ -8,7 +8,12 @@ function reverseLetter(str) {
     .reverse()
     .join("");
 }
-
+reverseLetter = (s) =>
+  s
+    .replace(/[^a-z]/gi, "")
+    .split("")
+    .reverse()
+    .join("");
 console.log(reverseLetter("krishan"), "nahsirk");
 
 console.log(reverseLetter("ultr53o?n"), "nortlu");
