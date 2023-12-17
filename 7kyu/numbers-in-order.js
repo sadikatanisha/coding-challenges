@@ -24,3 +24,13 @@ console.log(
   false,
   'The list of numbers "9, 8, 7, 6, 5, 4, 3, 2, 1" is in DESCENDING order not ascending order'
 );
+
+function inAscOrder(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+const inAscOrder = (arr) => arr.join("") === arr.sort((a, b) => a - b).join("");
