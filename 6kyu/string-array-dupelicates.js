@@ -10,21 +10,32 @@
 //after each loop we will check if there's consecutive dupes if not assign the empty string with that
 //then push it to an array
 
-function dup(s) {
-  let res = [];
-  for (let i = 0; i < s.length; i++) {
-    let str = "";
-    let el = s[i];
-    for (let j = 0; j < el.length; j++) {
-      if (el[j] !== el[j + 1]) {
-        str += el[j];
-        console.log(str);
-      }
-    }
+// function dup(s) {
+//   let res = [];
+//   for (let i = 0; i < s.length; i++) {
+//     let str = "";
+//     let el = s[i];
+//     for (let j = 0; j < el.length; j++) {
+//       if (el[j] !== el[j + 1]) {
+//         str += el[j];
+//         console.log(str);
+//       }
+//     }
 
-    res.push(str);
-    console.log(res);
-  }
+//     res.push(str);
+//     console.log(res);
+//   }
+// }
+
+function dup(s) {
+  return s.map((w) => {
+    return w
+      .split("")
+      .filter((c, i, arr) => {
+        return c !== arr[i + 1];
+      })
+      .join("");
+  });
 }
 
 console.log(
@@ -59,14 +70,3 @@ console.log(
 //   "voradospulen",
 //   "achcha",
 // ]);
-
-function dup(s) {
-  return s.map((w) => {
-    return w
-      .split("")
-      .filter((c, i, arr) => {
-        return c !== arr[i - 1];
-      })
-      .join("");
-  });
-}
