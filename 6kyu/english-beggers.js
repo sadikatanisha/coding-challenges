@@ -9,10 +9,14 @@
 
 function beggars(values, n) {
   let res = [];
-  while (n > 0) {
-    let val = 0;
-    for (let i = 0; i < values.length; i++) {}
+  for (let i = 0; i < n; i++) {
+    let sum = 0;
+    for (let j = i; j < values.length; j += n) {
+      sum += values[j];
+    }
+    res.push(sum);
   }
+  return res;
 }
 
 console.log(beggars([1, 2, 3, 4, 5], 1), [15]);
