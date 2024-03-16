@@ -1,4 +1,1 @@
- while (n > 0) {
-    console.log(n);
-    n--;
-  }
+console.log(diamond(5), "  *\n ***\n*****\n ***\n  *\n");
