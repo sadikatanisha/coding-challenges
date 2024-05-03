@@ -12,6 +12,10 @@ function solve(arr) {
     }
   }
 }
+
+const solve = (a) => a.find((e) => !a.includes(-e));
+const solve = (arr) => [...new Set(arr)].reduce((a, c) => a + c); //because -1 + 1 = 0, -2 +2 =0; so only 3 will remain
+
 console.log(solve([1, -1, 2, -2, 3]), 3);
 console.log(solve([-3, 1, 2, 3, -1, -4, -2]), -4);
 console.log(solve([1, -1, 2, -2, 3, 3]), 3);
