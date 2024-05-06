@@ -65,3 +65,11 @@ var list2 = [
 
 console.log(getFirstPython(list1), "Victoria, Puerto Rico");
 console.log(getFirstPython(list2), "There will be no Python developers");
+
+//
+function getFirstPython(list) {
+  const dev = list.find((x) => x.language === "Python");
+  return dev
+    ? `${dev.firstName}, ${dev.country}`
+    : "There will be no Python developers";
+}
