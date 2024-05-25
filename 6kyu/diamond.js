@@ -1,10 +1,17 @@
 //Calculate spaces for the diamonds
-//
+//    *
+//  * * *
+//* * * * *
+//  * * *
+//    *
 
 function diamond(n) {
+    if (n<0 || n%2 == 0 ){
+        return null
+      } 
   let res = "";
   let middle = Math.floor(n / 2) + 1; // Calculate the middle row
-  console.log(3 / 2);
+
 
   for (let i = 1; i <= n; i++) {
     let spaces = Math.abs(middle - i); // Calculate spaces before *
