@@ -53,3 +53,11 @@ console.log(explode([6, "c"]), [
 ]);
 console.log(explode(["a", "b"]), "Void!");
 console.log(explode(["a", 0]), []);
+
+//One liner
+function explode(x) {
+  const filteredArr = x.filter((foo) => typeof foo === "number"); // filter only the nmver type
+  return filteredArr.length //if there's any number or length in the array then count the numbers
+    ? Array(filteredArr.reduce((a, b) => a + b, 0)).fill(x) //count the filtered number
+    : "Void!"; //else return void
+}
