@@ -7,9 +7,10 @@
 //* we can sort the array then loop though the array and create a product of i and length-i
 
 function minSum(arr) {
-  let sorted = arr.sort((a, b) => a - b);
+  let sorted = arr.sort((a, b) => a - b); //O(N)
   let sum = 0;
   for (let i = 0; i < sorted.length / 2; i++) {
+    //O(N)
     let product = sorted[i] * sorted[sorted.length - i - 1];
     sum += product;
   }
