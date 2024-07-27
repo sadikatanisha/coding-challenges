@@ -14,3 +14,6 @@ console.log(
   }),
   false
 );
+
+// Time complexity:
+// *.every O(N)
