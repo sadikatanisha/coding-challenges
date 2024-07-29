@@ -31,3 +31,8 @@ console.log(
   dbSort(["Apple", 46, "287", 574, "Peach", "3", "69", 78, "Grape", "423"]),
   [46, 78, 574, "287", "3", "423", "69", "Apple", "Grape", "Peach"]
 );
+
+const dbSort = (arr) =>
+  [...arr.filter((el) => typeof el === "number").sort((a, b) => a - b)].concat([
+    ...arr.filter((el) => typeof el === "string").sort(),
+  ]);
